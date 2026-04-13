@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "keeper-agent"
+version = "0.1.0"
+description = "🛡️ Secret proxy guardian for the Pelagic AI fleet"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+keywords = ["security", "secrets", "proxy", "fleet", "ai-agents"]
+
+[project.scripts]
+keeper-agent = "cli:main"
+
+[tool.setuptools.packages.find]
+include = ["*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
