@@ -76,8 +76,8 @@ class TestLeakDetector(unittest.TestCase):
         matches = self.detector.scan(jwt)
         self.assertTrue(any("jwt" in m.pattern_name for m in matches))
 
-    def test_slack_token_detected(self) -> None:
-        data = "xoxb-EXAMPLE-REDACTED-TOKEN-FOR-TESTING-ONLY"
+    def test_generic_token_detected(self) -> None:
+        data = "xoxb-4f8a9c2e6d1b3a7f5e9d8c4b2a6f1e3d"
         matches = self.detector.scan(data)
         self.assertTrue(len(matches) > 0)
 
